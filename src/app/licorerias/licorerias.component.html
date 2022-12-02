@@ -1,0 +1,21 @@
+<h2>licorerias</h2>
+<div>
+  <form class="form">
+    <label for="new-licoreria">Nombre</label>
+    <input id="new-licoreria" #licoreriaNombre>
+    <label for="new-licoreria">Ubicacion</label>
+    <input id="new-licoreria" #licoreriaUbicacion>
+  </form>
+  <button type="button" class="add-button" (click)="add(licoreriaNombre.value,licoreriaUbicacion.value);  licoreriaNombre.value='';licoreriaUbicacion.value=''">
+    Agregar licoreria
+  </button>
+</div>
+<ul class="licorerias">
+  <li *ngFor="let licoreria of licorerias">
+    <a routerLink="/detail/{{licoreria.id}}">
+      {{licoreria.nombre}}
+    </a>
+    <button type="button" class="delete" title="delete licoreria"
+            (click)="delete(licoreria)">X</button>
+  </li>
+</ul>

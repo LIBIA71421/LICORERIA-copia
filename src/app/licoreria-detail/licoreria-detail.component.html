@@ -1,0 +1,19 @@
+<div *ngIf="licoreria">
+  <h2>{{licoreria.nombre | uppercase}} Detalles</h2>
+  <form class="form">
+    <div><span>Id: </span>{{licoreria.id}}</div>
+    <div><span>Nombre: </span>{{licoreria.nombre}}</div>
+    <div><span>Nombre: </span>{{licoreria.ubicacion}}</div>
+  </form>
+  <div class="lab">
+    <label for="licoreria-nombre">Nombre: </label>
+    <input id="licoreria-nombre" [(ngModel)]="licoreria.nombre" placeholder="licoreria"/>
+    <label for="licoreria-ubicacion">Ubicacion: </label>
+    <input id="licoreria-ubicacion" [(ngModel)]="licoreria.ubicacion" placeholder="licoreria"/>
+
+  </div>
+  <form class="form2">
+    <button type="button" (click)="goBack()">Volver</button>
+    <button type="button" (click)="save()">save</button>
+  </form>
+</div>

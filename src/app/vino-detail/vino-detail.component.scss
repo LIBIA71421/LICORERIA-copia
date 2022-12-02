@@ -1,0 +1,35 @@
+.vinos {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input {
+  display: block;
+  width: 30%;
+  padding: .5rem;
+  margin: 1rem;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  border-radius: 50px;
+}
+.form {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form2 {
+  padding-top: 30px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+  display: block;
+
+}

@@ -1,0 +1,14 @@
+<p>licoreria-search works!</p>
+<div id="search-component">
+  <form class="form">
+    <label for="search-box">Busqueda de licorerias</label>
+    <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+  </form>
+  <ul class="search-result">
+    <li *ngFor="let licoreria of licorerias$ | async" >
+      <a routerLink="/detail/{{licoreria.id}}">
+        {{licoreria.nombre}}
+      </a>
+    </li>
+  </ul>
+</div>

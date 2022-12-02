@@ -1,0 +1,29 @@
+<div *ngIf="vino">
+  <h2>{{vino.nombre | uppercase}} Detalles</h2>
+  <form class="form">
+    <div><span>Id: </span>{{vino.id}}</div>
+    <div><span>Nombre: </span>{{vino.nombre}}</div>
+    <div><span>Cantidad: </span>{{vino.cantidad}}</div>
+    <div><span>Marca: </span>{{vino.marca}}</div>
+    <div><span>Anio: </span>{{vino.anio}}</div>
+    <div><span>Tipo: </span>{{vino.tipo}}</div>
+  </form>
+  <div class="lab">
+    <label for="vino-nombre">Nombre: </label>
+    <input id="vino-nombre" [(ngModel)]="vino.nombre" placeholder="Vino"/>
+    <label for="vino-nombre">Cantidad: </label>
+    <input id="vino-cantidad" [(ngModel)]="vino.cantidad" placeholder="Vino"/>
+
+    <label for="vino-nombre">Marca: </label>
+    <input id="vino-marca" [(ngModel)]="vino.marca " placeholder="vino"/>
+    <label for="vino-nombre">Anio: </label>
+    <input id="vino-anio" [(ngModel)]="vino.anio" placeholder="Vino"/>
+    <label for="vino-nombre">Tipo: </label>
+    <input id="vino-tipo" [(ngModel)]="vino.tipo" placeholder="Vino"/>
+
+  </div>
+  <form class="form2">
+    <button type="button" (click)="goBack()">Volver</button>
+    <button type="button" (click)="save()">save</button>
+  </form>
+</div>

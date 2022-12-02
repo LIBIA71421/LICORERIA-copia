@@ -1,0 +1,27 @@
+<h2>Vinos</h2>
+<div>
+  <form class="form">
+    <label for="new-vino">Nombre</label>
+    <input id="new-vino" #vinoNombre>
+    <label for="new-vino">Cantidad</label>
+    <input id="new-vino" #vinoCantidad>
+    <label for="new-vino">Marca</label>
+    <input id="new-vino" #vinoMarca>
+    <label for="new-vino">Anio</label>
+    <input id="new-vino" #vinoAnio>
+    <label for="new-vino">Tipo</label>
+    <input id="new-vino" #vinoTipo>
+  </form>
+  <button type="button" class="add-button" (click)="add(vinoNombre.value,vinoCantidad.value,vinoMarca.value,  vinoAnio.value,vinoTipo.value);  vinoNombre.value='';vinoCantidad.value='';vinoMarca.value='';vinoAnio.value='';  vinoTipo.value=''">
+    Agregar Vino
+  </button>
+</div>
+<ul class="vinos">
+  <li *ngFor="let vino of vinos">
+    <a routerLink="/detail/{{vino.id}}">
+      {{vino.nombre}}
+    </a>
+    <button type="button" class="delete" title="delete vino"
+            (click)="delete(vino)">X</button>
+  </li>
+</ul>

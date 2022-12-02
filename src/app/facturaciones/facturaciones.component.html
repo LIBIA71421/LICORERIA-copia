@@ -1,0 +1,25 @@
+<h2>facturas</h2>
+<div>
+  <form class="form">
+    <label for="new-factura">Nombre </label>
+    <input id="new-factura" #facturaNombre>
+    <label for="new-factura">Apellido </label>
+    <input id="new-factura" #facturaApellido>
+    <label for="new-factura">NIT </label>
+    <input id="new-factura" #facturaNIT>
+    <label for="new-factura">Total </label>
+    <input id="new-factura" #facturaTotal>
+  </form>
+  <button type="button" class="add-button" (click)="add(facturaNombre.value,facturaApellido.value,facturaNIT.value,facturaTotal.value);  facturaNombre.value='';facturaApellido.value='';facturaNIT.value='';facturaTotal.value=''">
+    Agregar factura
+  </button>
+</div>
+<ul class="facturas">
+  <li *ngFor="let factura of facturaciones">
+    <a routerLink="/detail/{{factura.id}}">
+      {{factura.firstName}}
+    </a>
+    <button type="button" class="delete" title="delete factura"
+            (click)="delete(factura)">X</button>
+  </li>
+</ul>

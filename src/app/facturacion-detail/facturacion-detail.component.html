@@ -1,0 +1,26 @@
+<div *ngIf="factura">
+  <h2>{{factura.firstName | uppercase}} Detalles</h2>
+  <form class="form">
+    <div><span>Id: </span>{{factura.id}}</div>
+    <div><span>Nombre: </span>{{factura.firstName}}</div>
+    <div><span>Nombre: </span>{{factura.lastName}}</div>
+    <div><span>Nombre: </span>{{factura.nit}}</div>
+    <div><span>Nombre: </span>{{factura.total}}</div>
+  </form>
+  <div class="lab">
+    <label for="factura-firstName">Nombre: </label>
+    <input id="factura-firstName" [(ngModel)]="factura.firstName" placeholder="factura"/>
+    <label for="factura-lastName">Apellido: </label>
+    <input id="factura-lastName" [(ngModel)]="factura.lastName" placeholder="factura"/>
+
+    <label for="factura-nit">NIT: </label>
+    <input id="factura-nit" [(ngModel)]="factura.nit" placeholder="factura"/>
+    <label for="factura-total">Total: </label>
+    <input id="factura-total" [(ngModel)]="factura.total" placeholder="factura"/>
+
+  </div>
+  <form class="form2">
+    <button type="button" (click)="goBack()">Volver</button>
+    <button type="button" (click)="save()">save</button>
+  </form>
+</div>
