@@ -9,7 +9,6 @@ import {Facturaciones} from "./Facturaciones";
 export class FacturacionService {
 
   private FacturacionUrl = 'http://localhost:3000/licoreria';
-  private FactUrl = 'http://localhost:3000/licoreria/facturacion/1';
 
   constructor(private http: HttpClient) { }
 
@@ -20,15 +19,10 @@ export class FacturacionService {
 
   get(id: number): Observable<Facturaciones>
   {
-    const url = `${this.FacturacionUrl}/${id}`;
+    const url = `${this.FacturacionUrl}/facturacion/${id}`;
     return this.http.get<Facturaciones>(url);
   }
 
-  getFact(id: number): Observable<Facturaciones>
-  {
-    const url = `${this.FactUrl}/${id}`;
-    return this.http.get<Facturaciones>(url);
-  }
   search(id:string): Observable<Facturaciones[]>{
     if(!id.trim()){
       return of([]);

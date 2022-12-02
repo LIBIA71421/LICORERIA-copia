@@ -29,11 +29,6 @@ export class FacturacionDetailComponent implements OnInit {
     this.facturacionService.get(id)
       .subscribe(factura=>this.factura = factura);
   }
-  getFact(): void {
-    const id= parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.facturacionService.get(id)
-      .subscribe(factura=>this.factura = factura);
-  }
   goBack():void{
     this.location.back();
   }

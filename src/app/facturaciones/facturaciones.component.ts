@@ -19,9 +19,6 @@ export class FacturacionesComponent implements OnInit {
     this.facturacionservice.gets()
       .subscribe(facturaciones => this.facturaciones = facturaciones);
   }
-  getFact(): void{
-
-  }
 
   add(firstName: string, lastName: string, nit: string, total: string): void{
     let facturacion= {} as Facturaciones;
